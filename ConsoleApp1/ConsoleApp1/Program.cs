@@ -2,6 +2,9 @@
 
 using ConsoleApp1.Algorithms;
 using ConsoleApp1.Algorithms.Implementation;
+using ConsoleApp1.Algorithms.Search;
+using ConsoleApp1.Algorithms.Sorting;
+using ConsoleApp1.Algorithms.Strings;
 using System;
 using System.Data.SqlTypes;
 using System.Diagnostics;
@@ -10,81 +13,7 @@ using System.Linq;
 using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 
-//test();
-//howManyGames(81, 7, 11, 3339);
-//Console.WriteLine(encryption("feedthedog"));
-//Console.WriteLine(getMoneySpent(new int[] { 5, 2, 8 }, new int[] { 3, 1 }, 10));
-//insertionSort1(10, new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 1 });
-//Console.WriteLine(viralAdvertising(5).ToString());
-//Console.WriteLine(divisibleSumPairs(6, 3, new List<int> { 1, 3, 2, 6, 1, 2 }));
-//breakingRecords(new List<int>() { 10, 5, 20, 20, 4, 5, 2, 21, 1 });
-//bonAppetit(new List<int>() { 3, 10, 2, 9 }, 1, 12);
-//Console.WriteLine(repeatedString("a", 1000000000000).ToString());
-//Console.WriteLine(pairs(2, new List<int>() { 1, 5, 3, 4, 2 }));
-//Console.WriteLine(minimumLoss(new List<long>() { 260181765677098, 7, 8, 595362717731368, 5 }));
-//Console.WriteLine(beautifulDays(20, 23, 6));
-//Console.WriteLine(pageCount(6, 3));
-//Console.WriteLine(gemstones(new List<string> { "abcdde", "baccd", "eeabg" }));
-//Console.WriteLine(gameOfThrones("aaabbbb"));
-//Console.WriteLine(superReducedString("baab"));
-//Console.WriteLine(minimumNumber(3, "Ab1"));
-/*foreach (int i in climbingLeaderboard(new List<int>() { 100, 100, 50, 40, 40, 20, 10 }, new List<int>() { 4, 5, 25, 50, 120 }))
-{
-    Console.WriteLine(i);
-}*/
-//Console.WriteLine(pickingNumbers(new List<int>() { 4, 6, 5, 3, 3, 1 }));
-//Console.WriteLine(minimumDistances(new List<int>() { 3, 2, 1, 2, 3 }));
-//Console.WriteLine(countingValleys(8, "UDDDUDUU"));
-//Loop(5, 3, 5);
-//Console.WriteLine(utopianTree(4));
-//Console.WriteLine(surfaceArea(new List<List<int>>() { new List<int>() { 1, 3, 4 }, new List<int>() { 2, 2, 3 }, new List<int>() { 1, 2, 4 } }));
-///Console.WriteLine(formingMagicSquare(new List<List<int>>() { new List<int>() { 5, 3, 4 }, new List<int>() { 1, 5, 8 }, new List<int>() { 6, 4, 2 } }));
-/*foreach (int i in circularArrayRotation(new List<int>() { 3, 4, 5, 7 }, 2, new List<int>() { 0, 1, 2, 3 }))
-{
-    Console.WriteLine(i);
-}*/
-/*matrixRotation(new List<List<int>>() { new List<int>() { 9718805, 60013003, 5103628, 85388216, 21884498, 38021292, 73470430, 31785927 },
-    new List<int>() { 69999937, 71783860, 10329789, 96382322, 71055337, 30247265, 96087879, 93754371 },
-    new List<int>() { 79943507, 75398396, 38446081, 34699742, 1408833, 51189, 17741775, 53195748 },
-    new List<int> { 79354991, 26629304, 86523163, 67042516, 54688734, 54630910, 6967117, 90198864 },
-    new List<int> { 84146680, 27762534, 6331115, 5932542, 29446517, 15654690, 92837327, 91644840 },
-    new List<int> { 58623600, 69622764, 2218936, 58592832, 49558405, 17112485, 38615864, 32720798 },
-    new List<int> { 49469904, 5270000, 32589026, 56425665, 23544383, 90502426, 63729346, 35319547 },
-    new List<int> { 20888810, 97945481, 85669747, 88915819, 96642353, 42430633, 47265349, 89653362 },
-    new List<int> { 55349226, 10844931, 25289229, 90786953, 22590518, 54702481, 71197978, 50410021 },
-    new List<int> { 9392211, 31297360, 27353496, 56239301, 7071172, 61983443, 86544343, 43779176 },}, 40);*/
-
-//Console.WriteLine(twoStrings("hi", "world"));
-//Console.WriteLine(appendAndDelete("hackerhappy", "hackerrank", 9));
-//Console.WriteLine(squares(24, 49));
-//Console.WriteLine(formingMagicSquare(new List<List<int>>() { new List<int>() { 4, 9, 2 }, new List<int>() { 3, 5, 7 }, new List<int>() { 8, 1, 5 } }));
-//Console.WriteLine(dayOfProgrammer(1918));
-//Console.WriteLine(saveThePrisoner(3, 7, 3));
-//icecreamParlor(4, new List<int>() { 2,2,4,3 });
-//Console.WriteLine(jumpingOnClouds(new int[] {0,0,1,0,0,1,1,0}, 2));
-//Console.WriteLine(findDigits(120));
-//permutationEquation(new List<int>() { 5,2,1,3,4 });
-//Console.WriteLine(jumpingOnClouds2(new List<int> { 0,0,1,0,0,1,0 }));
-//Console.WriteLine(libraryFine(1, 7, 1014, 1, 1, 1015));
-//cutTheSticks(new List<int>() { 1,2,3,4,3,3,2,1 });
-//Console.WriteLine(equalizeArray(new List<int>() { 3, 3, 2, 1, 3 }));
-//Console.WriteLine(biggerIsGreater("dkhc"));
-//acmTeam2(new List<string>() { "10101", "11100", "11010", "00101" });
-//Console.WriteLine(taumBday(27984,1402,619246,615589,247954));
-//Console.WriteLine(timeInWords(1, 1));
-//kaprekarNumbers(1, 9999999);
-//Console.WriteLine(beautifulTriplets(3, new List<int>() { 1 }));
-/*Console.WriteLine(chocolateFeast(15, 3, 2));
-serviceLane(8, new List<int>() { 2, 3, 1, 2, 3, 2, 3, 3},
-    new List<List<int>>() { new List<int>() { 0, 3 }, new List<int>() { 4,6 }, new List<int>() { 6,7 }, new List<int>() { 3,5 }, new List<int>() { 0, 7 } });*/
-//Console.WriteLine(strangeCounter(4));
-//Console.WriteLine(workbook(2, 3, new List<int>() { 4,2 }));
-//Console.WriteLine(flatlandSpaceStations(20, new int[] { 13, 1, 11, 10, 6 }));
-//AddTwoNumbers(new ListNode(), new ListNode());
-/*Console.WriteLine(TheGridSearch.gridSearch2(new List<string>() { "7283455864", "6731158619", "8988242643", "3830589324", "2229505813", "5633845374", "6473530293", "7053106601", "0834282956", "4607924137" },
-    new List<string>() { "9505", "3845", "3530" }));*/
-/*Console.WriteLine(TheGridSearch.gridSearch(new List<string>() { "111111111111111", "111111111111111", "111111111111111", "111111011111111",
-"111111111111111", "111111111111111", "101010101010101" }, new List<string>() { "11111", "11111", "11111", "11110" }));*/
+CaesarCipher.caesarCipher("middle-Outz", 2);
 
 static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
 {
